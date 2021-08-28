@@ -1,0 +1,78 @@
+.container
+{
+    margin-left: 230px;
+}
+.inDonut i
+{
+    background: #f3f5fa;
+    position: absolute;
+    line-height: 64px;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    height: 64px;
+    width: 64px;
+    transform: translate(-46%, -29%);
+    
+}
+.in2Donut i
+{
+    background: #f3f5fa;
+    position: absolute;
+    line-height: 64px;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    height: 64px;
+    width: 64px;
+    transform: translate(-49%, -76%);
+
+}
+i.fa-ellipsis-h
+{
+    cursor: pointer;
+}
+.purple
+{
+    background-color: #6E35DA;
+}
+.card ul li{
+    display: inline-block;
+    font-weight: 800;
+}
+.edit
+{
+    width: 75px; 
+}
+.follow
+{
+    width: 80px;
+    padding: 0;
+}
+.c1
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #6E35DA
+}
+.c2
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+}
+.c3
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #FE9355;
+}
+.c4
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #F7497C;
+}

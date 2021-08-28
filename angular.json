@@ -28,11 +28,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ]
           },
           "configurations": {
@@ -93,10 +97,14 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"]
+             
           }
         },
         "lint": {

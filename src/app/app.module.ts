@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgApexchartsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
