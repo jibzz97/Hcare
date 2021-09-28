@@ -1,171 +1,187 @@
 
 <div class="container">
-    <div class="row mb-3">
+  <div class="row mb-3">
 
-        <div class="col-lg-3">
-            <div class="card ">
-                <div class="card-body p-0">
-                  <div class="row ">
-                    <div class="p-3">
-                      <div class="media ">
-                        <i class="fa fa-crutch c1 m-3"></i>
-                        <div class="media-body">
-                          <p class="font-weight-bold mt-3 mb-0">3,256</p>
-                          <p class="text-muted small ">Total patients</p>
-                        </div>
+      <div class="col-lg-3">
+          <div class="card ">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="p-3">
+                    <div class="media ">
+                      <i class="fa fa-crutch c1 m-3"></i>
+                      <div class="media-body">
+                        <p class="font-weight-bold mt-3 mb-0">3,256</p>
+                        <p class="text-muted small ">Total patients</p>
                       </div>
                     </div>
-                    <div class="col">
-                      <i class="fa fa-ellipsis-h text-right text-muted mt-3"></i></div>
                   </div>
-                </div>
-              </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="card ">
-                <div class="card-body p-0">
-                  <div class="row ">
-                    <div class="p-3 ">
-                      <div class="media ">
-                        <i class="fa fa-users c2 m-3 text-primary"></i>
-                        <div class="media-body">
-                          <p class="mt-3 mb-0 font-weight-bold">394</p>
-                          <p class="text-muted small ">Available staff</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="card ">
-                <div class="card-body p-0">
-                  <div class="row ">
-                    <div class="p-3 ">
-                      <div class="media ">
-                        <i class="fa fa-credit-card c3 m-3"></i>
-                        <div class="media-body">
-                          <p class="mt-3 mb-0 font-weight-bold">$2,536</p>
-                          <p class="text-muted small ">Avg treat. Costs</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="card ">
-                <div class="card-body p-0">
-                  <div class="row ">
-                    <div class="p-3 ">
-                      <div class="media">
-                        <i class="fa fa-ambulance c4 m-3"></i>
-                        <div class="media-body">
-                          <p class="mt-3 mb-0 font-weight-bold">38</p>
-                          <p class="text-muted small ">Available Cars</p>
-                        </div>
-                      
-                      </div>
-                      
-                    </div>
-                    <div class="col">
-                    <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
-                  </div>
-                </div>
-              </div>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-9">
-        <div class="card ">
-          <div class="card-body p-0">
-            <div class="row">
-            <div class="col">
-              <p class="font-weight-bold text-left m-3">Outpatients vs.Inpatients Trend</p>
-            </div>
-            <div class="col text-right">
-              <div class="dropdown">
-                 Show
-                <a class="dropdown-toggle font-weight-bold m-3" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                  By Month
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">By Days</a>
-                  <a class="dropdown-item" href="#">By Weeks</a>
-                  <a class="dropdown-item" href="#">By Years</a>
+                  <div class="col">
+                    <i class="fa fa-ellipsis-h text-right text-muted mt-3"></i></div>
                 </div>
               </div>
             </div>
-            </div>
-            <hr class="mt-0">
-            <div class="row">
-              <div class="col-lg-8">
-                <div id="chart">
-                  <apx-chart
-                    [series]="chartOptions.series"
-                    [chart]="chartOptions.chart"
-                    [dataLabels]="chartOptions.dataLabels"
-                    [plotOptions]="chartOptions.plotOptions"
-                    [yaxis]="chartOptions.yaxis"
-                    [xaxis]="chartOptions.xaxis"
-                    [legend]="chartOptions.legend"
-                    [colors]="chartOptions.colors"
-                    [grid]="chartOptions.grid"
-                  ></apx-chart>
-                </div>
-              </div>
-              <div class="col-lg-4 ">
-                <div id="chart3" class="noselect">
-                  <div class="in2Donut  mt-0">
-                    <i class="fas fa-user-friends"></i></div>
-                  <canvas id="myChart2" height="19%" width="40%">
-                  </canvas>
-                </div>
-                <div id="chartjs-legend2" class="noselect"></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="col-lg-3">
-        <div class="card mb-3">
-          <div class="card-body p-0">
-            <div class="row ">
-              <div class="col">
-                <p class="font-weight-bold m-3">Patients by Gender</p>
+          <div class="card ">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="p-3 ">
+                    <div class="media ">
+                      <i class="fa fa-users c2 m-3 text-primary"></i>
+                      <div class="media-body">
+                        <p class="mt-3 mb-0 font-weight-bold">394</p>
+                        <p class="text-muted small ">Available staff</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
+                </div>
               </div>
             </div>
-            <hr class="mt-0">
-            <div id="chart" class="noselect">
-              <div class="inDonut my-3">
-              <i class="fas fa-venus-mars gender"></i></div>
-              <canvas id="myChart" height="19%" width="40%">
-              </canvas>
+      </div>
+      <div class="col-lg-3">
+          <div class="card ">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="p-3 ">
+                    <div class="media ">
+                      <i class="fa fa-credit-card c3 m-3"></i>
+                      <div class="media-body">
+                        <p class="mt-3 mb-0 font-weight-bold">$2,536</p>
+                        <p class="text-muted small ">Avg treat. Costs</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
+                </div>
+              </div>
             </div>
-            <div id="chartjs-legend" class="noselect"></div>
+      </div>
+      <div class="col-lg-3">
+          <div class="card ">
+              <div class="card-body p-0">
+                <div class="row ">
+                  <div class="p-3 ">
+                    <div class="media">
+                      <i class="fa fa-ambulance c4 m-3"></i>
+                      <div class="media-body">
+                        <p class="mt-3 mb-0 font-weight-bold">38</p>
+                        <p class="text-muted small ">Available Cars</p>
+                      </div>
+                    
+                    </div>
+                    
+                  </div>
+                  <div class="col">
+                  <i class="fa fa-ellipsis-h text-muted text-right mt-3"></i></div>
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="card ">
+        <div class="card-body p-0">
+          <div class="row">
+          <div class="col">
+            <p class="font-weight-bold text-left m-3">Outpatients vs.Inpatients Trend</p>
+          </div>
+          <div class="col text-right">
+            <div class="dropdown">
+               Show
+              <a class="dropdown-toggle font-weight-bold m-3" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                By Month
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">By Days</a>
+                <a class="dropdown-item" href="#">By Weeks</a>
+                <a class="dropdown-item" href="#">By Years</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <hr class="mt-0">
+          <div class="row">
+            <div class="col-lg-8">
+              <div id="chart">
+                <apx-chart
+                  [series]="series"
+                  [chart]="chart"
+                  [title]="title"
+                ></apx-chart>
+              </div>
+            </div>
+            <div class="col-lg-4 ">
+              <div id="chart3" class="noselect">
+                <div class="in2Donut  mt-0">
+                  <i class="fas fa-user-friends"></i></div>
+                <canvas id="myChart2" height="19%" width="40%">
+                </canvas>
+              </div>
+              <div id="chartjs-legend2" class="noselect"></div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-    <div class="row">
-      <div class="col-lg-6 ">
-        <div class="card ">
-          <div class="card-body p-0">
-            <div class="row">
+    <div class="col-lg-3">
+      <div class="card mb-3">
+        <div class="card-body p-0">
+          <div class="row ">
             <div class="col">
-              <p class="font-weight-bold text-left m-3">Time Admitted</p>
+              <p class="font-weight-bold m-3">Patients by Gender</p>
             </div>
-            <div class="col text-right">
+          </div>
+          <hr class="mt-0">
+          <div id="chart" class="noselect">
+            <div class="inDonut my-3">
+            <i class="fas fa-venus-mars gender"></i></div>
+            <canvas id="myChart" height="19%" width="40%">
+            </canvas>
+          </div>
+          <div id="chartjs-legend" class="noselect"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-6 ">
+      <div class="card ">
+        <div class="card-body p-0">
+          <div class="row">
+          <div class="col">
+            <p class="font-weight-bold text-left m-3">Time Admitted</p>
+          </div>
+          <div class="col text-right">
+            <div class="dropdown">
+              <a class="dropdown-toggle font-weight-bold m-3" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Today
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">this week</a>
+                <a class="dropdown-item" href="#">this month</a>
+                <a class="dropdown-item" href="#">this Year</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <hr class="mt-0">
+          <canvas id="chart1ID" width="auto" height="66"></canvas>
+    </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-body p-0">
+          <div class="row ">
+            <div class="col">
               <div class="dropdown">
                 <a class="dropdown-toggle font-weight-bold m-3" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                  Today
+                  Patients by devision
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">this week</a>
@@ -173,55 +189,33 @@
                   <a class="dropdown-item" href="#">this Year</a>
                 </div>
               </div>
+              <div id="myList">
+              <ul class="list-group scrollspy-list">
+                <li class="list-group-item disabled text-left" aria-disabled="true" ><i class="fas fa-home pr-3"></i> Division </li>
+                <li class="list-group-item text-left" ><i class="fas fa-heartbeat pr-3"></i>Cardiology</li>
+                <li class="list-group-item text-left" ><i class="fas fa-brain pr-3"></i>Neurology</li>
+                <li class="list-group-item text-left" ><i class="fas fa-cut pr-3"></i>Surgery</li>
+                <li class="list-group-item text-left" ><i class="fas fa-hospital-alt pr-3"></i>Hospitality</li>
+              </ul></div>
             </div>
-            </div>
-            <hr class="mt-0">
-            <canvas id="chart1ID" width="auto" height="66"></canvas>
-      </div>
+           
+          </div>
         </div>
       </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body p-0">
-            <div class="row ">
-              <div class="col">
-                <div class="dropdown">
-                  <a class="dropdown-toggle font-weight-bold m-3" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    Patients by devision
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">this week</a>
-                    <a class="dropdown-item" href="#">this month</a>
-                    <a class="dropdown-item" href="#">this Year</a>
-                  </div>
-                </div>
-                <div id="myList">
-                <ul class="list-group scrollspy-list">
-                  <li class="list-group-item disabled text-left" aria-disabled="true" ><i class="fas fa-home pr-3"></i> Division </li>
-                  <li class="list-group-item text-left" ><i class="fas fa-heartbeat pr-3"></i>Cardiology</li>
-                  <li class="list-group-item text-left" ><i class="fas fa-brain pr-3"></i>Neurology</li>
-                  <li class="list-group-item text-left" ><i class="fas fa-cut pr-3"></i>Surgery</li>
-                  <li class="list-group-item text-left" ><i class="fas fa-hospital-alt pr-3"></i>Hospitality</li>
-                </ul></div>
-              </div>
-             
+    </div>
+    <div class="col-lg-3">
+      <div class="card purple">
+        <div class="card-body p-0">
+          <div class="row ">
+            <div class="col">
+              <h4 class="font-weight-bold text-white m-3">3,240</h4>
+              <p class="font-weight-bold text-white m-3">patients this month</p>
+              <canvas id="myChart4" width="auto" height="110"></canvas>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
-        <div class="card purple">
-          <div class="card-body p-0">
-            <div class="row ">
-              <div class="col">
-                <h4 class="font-weight-bold text-white m-3">3,240</h4>
-                <p class="font-weight-bold text-white m-3">patients this month</p>
-                <canvas id="myChart4" width="auto" height="110"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+    </div>
+  
 </div>
 </div>
