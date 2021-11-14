@@ -1,0 +1,61 @@
+/*sidebar*/
+.sidebar
+{
+   
+    background: #fff;
+    position: fixed;
+    height: 100%;
+   width: 240px;
+}
+
+.sidebar a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+}
+.sidebar li{
+    text-align: left;
+    list-style: none;
+    
+}
+.btnRegister
+{
+    background-color: #6E35DA;
+    color: #fff;
+}
+.sidebar a:hover
+{
+    color: #6E35DA !important;
+}
+@media only screen and (max-width: 600px) {
+    .sidebar
+    {
+       display: none;
+    }
+    .content
+{
+margin-left: 81px;
+}}
+.mini-sidebar
+{
+    background: #fff;
+    position: fixed;
+    height: 100%;
+   width: 80px;
+}
+.mini-sidebar li>a
+      {
+          font-size: 22px;
+      }
+    
+      @media only screen and (min-width: 601px) {
+        
+.mini-sidebar 
+{ 
+
+  display: none;
+}
+
+      }
