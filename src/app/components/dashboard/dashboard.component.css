@@ -1,0 +1,165 @@
+.content
+{
+    margin-left: 241px;
+    
+}
+.col-lg-3 .col-lg-6 .col-lg-9
+{
+    position: relative;
+    width: 83%!important;
+    padding-right: 16px!important;
+    padding-left: 18px!important;
+}
+
+.jibz
+{
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+}
+.input-icons i { 
+    position: absolute; 
+} 
+  
+.input-icons { 
+    margin-bottom: 10px; 
+} 
+.input-field {  
+    padding: 10px;  
+    border: none;
+}
+.imgNav
+{
+    background: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+}
+.edit
+{
+    width: 75px; 
+}
+.follow
+{
+    width: 80px;
+    padding: 0;
+}
+@media only screen and (max-width: 600px) {
+    .content
+{
+margin-left: 81px;
+}}
+.pi-bell
+{
+    cursor:pointer;
+}
+
+.inDonut i
+{
+    background: #f3f5fa;
+    position: absolute;
+    line-height: 64px;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    height: 64px;
+    width: 64px;
+    transform: translate(-46%, -29%);
+    
+}
+.in2Donut i
+{
+    background: #f3f5fa;
+    position: absolute;
+    line-height: 64px;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    height: 64px;
+    width: 64px;
+    transform: translate(-49%, -76%);
+
+}
+i.fa-ellipsis-h
+{
+    cursor: pointer;
+}
+.purple
+{
+    background-color: #6E35DA;
+}
+.card ul li{
+    display: inline-block;
+    font-weight: 800;
+}
+.edit
+{
+    width: 75px; 
+}
+.follow
+{
+    width: 80px;
+    padding: 0;
+}
+.c1
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #6E35DA
+}
+.c2
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+}
+.c3
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #FE9355;
+}
+.c4
+{
+    padding: 16px;
+    border-radius: 50%;
+    background: #f3f5fa;
+    color: #F7497C;
+}
+.container
+{
+    margin-left: 245px;
+    width: auto;
+}
+@media only screen 
+and (min-device-width : 986px)
+{
+    .container{
+        margin-left: 247px; 
+    } 
+}
+@media only screen and (max-width : 595px){
+    .container{
+        margin-left: 85px; 
+     }
+    
+}
+.p-progress-spinner-circle {
+    /* animation: p-progress-spinner-dash 1.5s ease-in-out infinite,p-progress-spinner-color 6s ease-in-out infinite; */
+    stroke: #d62d20;
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+  
+}
+.p-progress-spinner>div{
+    display: inline-block!important;
+    height: 152px!important;
+    margin: 0 auto!important;
+    position: relative!important;
+    width: 100px!important;
+}
