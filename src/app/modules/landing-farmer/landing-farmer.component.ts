@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Table } from 'primeng/table';
+import { PatientService } from '../services/patient.service';
+import { Patient } from '../models/Patient';
 
 @Component({
   selector: 'app-landing-farmer',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingFarmerComponent implements OnInit {
 
-  constructor() { }
+  products1!: Patient[];
+  constructor(private ps: PatientService) { }
 
   ngOnInit(): void {
+    this.ps.findAllPatients().subscribe(data => this.products1 = data);
+    // sessionStorage.clear();
+    
   }
 
+
+
+  clear(table: Table) {
+    table.clear();
+  }
 }

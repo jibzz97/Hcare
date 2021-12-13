@@ -16,6 +16,18 @@ import { ContainerComponent } from './components/container/container.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LandingDoctorComponent } from './modules/landing-doctor/landing-doctor.component';
 import { LandingFarmerComponent } from './modules/landing-farmer/landing-farmer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LandingPatientComponent } from './modules/landing-patient/landing-patient.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // added this
+import {TableModule} from 'primeng/table';
+import { AvatarModule } from 'ngx-avatar';
+
+
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive'; // this includes the core NgIdleModule but includes keepalive providers for easy wireup
+import { MomentModule } from 'angular2-moment'; // optional, provides moment-style pipes for date formatting
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +41,7 @@ import { LandingFarmerComponent } from './modules/landing-farmer/landing-farmer.
      PageNotFoundComponent,
      LandingDoctorComponent,
      LandingFarmerComponent,
+     LandingPatientComponent,
     
   ],
   imports: [
@@ -38,8 +51,14 @@ import { LandingFarmerComponent } from './modules/landing-farmer/landing-farmer.
     AppRoutingModule,
     NgApexchartsModule,
     ChartModule,
-    ProgressSpinnerModule
-   
+    ProgressSpinnerModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    TableModule,
+    AvatarModule,   
+    NgIdleKeepaliveModule.forRoot(),
+    MomentModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   

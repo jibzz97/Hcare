@@ -1,127 +1,138 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { DEFAULT_INTERRUPTSOURCES, Idle } from '@ng-idle/core';
+import { Keepalive } from '@ng-idle/keepalive';
+import { Staff } from 'src/app/modules/models/staff';
+import { LoginService } from 'src/app/modules/services/login.service';
+import Swal from 'sweetalert2';
 
-// import { ApexTitleSubtitle, ApexChart, ApexAxisChartSeries } from "ng-apexcharts";
 
- 
 
-@Component({ 
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+
+@Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
-  /* title: ApexTitleSubtitle;
-  chart: ApexChart;
-  series: ApexAxisChartSeries; */
-  
- 
-  
-  /* constructor() {
-    this.title = {text: 'hello'};
-    this.chart = {  width: 500,
-                    height: 200,
-                    type: "bar"};
-    this.series =  [
-      {
-        name: "My-series",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-      }
-    ]; */
-    datadoughnut: any;
+
+  @Input()
+  staff!: Staff;
+
+
+  ngOnInit(): void {
+
+
+    this.staff = JSON.parse(sessionStorage.getItem('connectedUser') || '{}');
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    dataSource: any;
-  constructor() {
-    this.dataSource = {
-      labels: ["2015", "2016", "2017", "2018", "2019", "2020"],
-      datasets: [
-        {
-          label: "Company1",
-          backgroundColor: "blue",
-          data: [25, 30, 60, 50, 80, 90],
-          borderRadius: 1
-        },
-        {
-          label: "Company2",
-          backgroundColor: "#6E35DA",
-          data: [45, 33, 70, 72, 95]
-        }
-      ]
-    };
-  }
-  basicData: any;
-  basicData1: any;
-  
-  ngOnInit(): void{
-    this.basicData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [
-         
-          {
-              label: 'Second Dataset',
-              data: [28, 48, 40, 19, 86, 27, 90],
-              fill: false,
-              borderColor: '#FFA726',
-              tension: .4,
-              
-          }
-      ]
-  };
-  //second line chart
-  this.basicData1 = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-       
-        {
-           
-            data: [28, 48, 40, 19, 86, 27, 90],
-            fill: false,
-            borderColor: '#fff',
-            tension: .4
-        }
-    ]
-};
-//doghnuts chart
-this.datadoughnut = {
+  idleState = 'Not started.';
+  timedOut = false;
+  lastPing?: Date ;
+  title = 'angular-idle-timeout';
+
+  public modalRef!: BsModalRef;
+  @ViewChild('childModal', { static: false })
+  childModal!: ModalDirective;
+
+
+  constructor(private loginService: LoginService, private router: Router,private idle: Idle, private keepalive: Keepalive, 
+ private modalService: BsModalService) {
+
  
-  datasets: [
-      {
-          data: [300, 50, 100],
-          backgroundColor: [
-              "#FF6384",
-              "#36A2EB",
-              "#FFCE56",
-              
-          ],
-          borderColor: [
-            "#FF6384",
-              "#36A2EB",
-              "#FFCE56",
-        ],
-        
-          
-          hoverBackgroundColor: [
-              "#FF6384",
-              "#36A2EB",
-              "#FFCE56"
-          ],
-          borderWidth: 0.1
-      }]    
-  };
+    // sets an idle timeout of 5 seconds, for testing purposes.
+    idle.setIdle(5000000);
+    // sets a timeout period of 5 seconds. after 10 seconds of inactivity, the user will be considered timed out.
+    idle.setTimeout(5);
+    // sets the default interrupts, in this case, things like clicks, scrolls, touches to the document
+    idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);
+
+    idle.onIdleEnd.subscribe(() => { 
+      this.idleState = 'No longer idle.'
+      console.log(this.idleState);
+      this.reset();
+    });
+    
+    idle.onTimeout.subscribe(() => {
+      this.childModal.hide();
+      this.idleState = 'Timed out!';
+      this.timedOut = true;
+      console.log(this.idleState);
+      this.router.navigate(['/']);
+    });
+    
+    idle.onIdleStart.subscribe(() => {
+        this.idleState = 'You\'ve gone idle!'
+        console.log(this.idleState);
+        this.childModal.show();
+    
+        console.log("strat called ")
+    });
+    
+    idle.onTimeoutWarning.subscribe((countdown) => {
+      this.idleState = 'You will time out in ' + countdown + ' seconds!'
+      console.log(this.idleState);
+    });
+
+    // sets the ping interval to 15 seconds
+    keepalive.interval(15);
+
+    keepalive.onPing.subscribe(() => this.lastPing = new Date());
+
+    this.loginService.getUserLoggedIn().subscribe((userLoggedIn: any) => {
+      if (userLoggedIn) {
+        idle.watch()
+        this.timedOut = false;
+      } else {
+        idle.stop();
+      }
+    })
+
+    // this.reset();
+  }
+
+  reset() {
+    this.idle.watch();
+    //xthis.idleState = 'Started.';
+    this.timedOut = false;
+  }
+
+  hideChildModal(): void {
+    this.childModal.hide();
+  }
+
+  stay() {
+    this.childModal.hide();
+    this.reset();
+  }
+
+  logout() {
+
+    this.childModal.hide();
+    this.loginService.logout();
+    this.router.navigate(['login']);
   }
 
 
-  
-
-
-  
 }
-  
-     
-  
-  
-
-  
-
-
 
